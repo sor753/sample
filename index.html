@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>サンプル株式会社</title>
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="/">
+          <img class="header__logo" src="./img/logo.svg" alt="">
+        </a>
+        <div id="header-btn" class="header-btn">
+          <div class="header-btn__text header-btn__text_menu">
+            <span>MENU</span>
+          </div>
+          <div class="header-btn__text header-btn__text_close">
+            <span>CLOSE</span>
+          </div>
+          <div class="header-btn__icon">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <!-- /.header__inner -->
+    </header>
+    <div id="header-menu" class="header-menu">
+      <div class="header-menu__inner">
+        <ul class="header-menu-items">
+          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+            <div class="header-menu-item__inner">TOP
+              <span>トップ</span>
+            </div>
+          </li></a>
+          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+            <div class="header-menu-item__inner">NEWS 
+              <span>ニュース</span>
+            </div>
+          </li></a>
+          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+            <div class="header-menu-item__inner">ABOUT
+              <span>アバウト</span>
+            </div>
+          </li></a>
+          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+            <div class="header-menu-item__inner">RECRUIT
+              <span>リクルート</span>
+            </div>
+          </li></a>
+          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+            <div class="header-menu-item__inner">CONTACT
+              <span>コンタクト</span>
+            </div>
+          </li></a>
+        </ul>
+      </div>
+      <!-- /.header-menu__inner -->
+    </div>
+    <div class="MV">
+      <div class="MV__shadow"></div>
+      <h1 class="level1-heading">
+        <span class="level1-heading__inner">
+          未来に挑戦する<br class="sp-only">サンプルです。
+        </span>
+      </h1>
+      <div class="scroll-down">
+        <div class="scroll-down__square"></div>
+        <div class="scroll-down__text">SCROLL<br>DOWN</div>
+        <div class="scroll-down__allow"></div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{
+              const MENU_BTN = document.getElementById("header-btn");
+              const MENU = document.getElementById("header-menu");
+              MENU_BTN.addEventListener('click',()=>{
+                      MENU_BTN.classList.toggle("is_open");
+                      MENU.classList.toggle("is_open");
+                    });
+            });
+    </script>
+  </body>
+</html>
