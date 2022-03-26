@@ -35,6 +35,49 @@ img {
   @media (min-width: 1200px) {
     display: inline-block;
   }
+}/* common
+------------------------------*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.content-wrap {
+    @media (min-width: 768px) {
+      margin-bottom: 25px;
+    }
+    @media (min-width: 1200px) {
+      display: flex;
+      align-items: stretch;
+    }
+}
+.btn {
+  display: inline-block;
+  width: 250px;
+  max-width: 100%;
+  padding: 7.5px 25px;
+  border: 1px solid $text;
+  color: $text;
+  font-weight: bold;
+  text-align: center;
+  transition: .25s;
+  &::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 16px;
+    margin-left: 12.5px;
+    background: url(../img/allow.svg) center center/contain no-repeat;
+  }
+  &:focus,
+  &:hover {
+    background-color: $text;
+    color: #ffffff;
+    &::after {
+      background-image: url(../img/allow_w.svg);
+    }
+  }
 }
 /* header
 ------------------------------*/
@@ -49,10 +92,7 @@ img {
     height: 90px;
   }
   &__inner {
-    max-width: 1200px;
     height: 100%;
-    margin-right: auto;
-    margin-left: auto;
     padding-left: 15px;
     display: flex;
     flex-wrap: nowrap;
@@ -231,13 +271,9 @@ img {
 ------------------------------*/
 .MV {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
   height: 400px;
   background: url(../img/MV.jpg) center center/cover no-repeat;
   margin-top: 59px;  
-  margin-right: auto;
-  margin-left: auto;
   @media (min-width: 768px) {
     height: 540px;
     margin-top: 90px;
@@ -286,24 +322,18 @@ img {
     background: #ffffff;
   }
 }
-.main-content {
-  background: $bg;
+/* content
+------------------------------*/
+.content {
   @media (min-width: 1200px) {
-    flex-grow: 1
-  }
-  &__wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    @media (min-width: 1200px) {
-      display: flex;
-      align-items: stretch;
-    }
+    flex-grow: 1;
   }
   &__inner {
     padding: 25px 15px;
   }
+}
+.main-content {
+  background-color: $bg;
 }
 .title {
   display: inline;
@@ -344,9 +374,9 @@ img {
 .card {
   margin-bottom: 25px;
   width: 100%;
-  max-width: 300px;
   @media (min-width: 768px) {
     width: 32%; 
+    max-width: 300px;
   }
   &__img-wrap {
     margin-bottom: 15px;
@@ -356,8 +386,28 @@ img {
     margin-bottom: 15px;
   }
 }
-
-
+/* contact
+------------------------------*/
+.contact {
+  &__wrap {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+}
+.contact-btn {
+  &__wrap {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    &_bg-color {
+      background-color: $second;
+    }
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+}
 
 
 

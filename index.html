@@ -7,130 +7,194 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="header__inner">
-        <a href="/">
-          <img class="header__logo" src="./img/logo.svg" alt="">
-        </a>
-        <div id="header-btn" class="header-btn">
-          <div class="header-btn__text header-btn__text_menu">
-            <span>MENU</span>
-          </div>
-          <div class="header-btn__text header-btn__text_close">
-            <span>CLOSE</span>
-          </div>
-          <div class="header-btn__icon">
-            <span></span>
-            <span></span>
+
+    <!-- #app vur用 -->
+    <div id="app">
+
+      <!-- header -->
+      <header class="header">
+        <div class="header__inner container">
+          <a href="/">
+            <img class="header__logo" src="./img/logo.svg" alt="">
+          </a>
+          <div id="header-btn" class="header-btn">
+            <div class="header-btn__text header-btn__text_menu">
+              <span>MENU</span>
+            </div>
+            <div class="header-btn__text header-btn__text_close">
+              <span>CLOSE</span>
+            </div>
+            <div class="header-btn__icon">
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- /.header__inner -->
-    </header>
-    <div id="header-menu" class="header-menu">
-      <div class="header-menu__inner">
-        <ul class="header-menu-items">
-          <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
-              <div class="header-menu-item__inner">TOP
-                <span>トップ</span>
-              </div>
-            </li></a>
+        <!-- /.header__inner -->
+      </header>
+      <!-- /header -->
+
+      <!-- header menu -->
+      <div id="header-menu" class="header-menu">
+        <div class="header-menu__inner">
+          <ul class="header-menu-items">
             <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
-                <div class="header-menu-item__inner">NEWS 
-                  <span>ニュース</span>
+                <div class="header-menu-item__inner">TOP
+                  <span>トップ</span>
                 </div>
               </li></a>
               <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
-                  <div class="header-menu-item__inner">ABOUT
-                    <span>アバウト</span>
+                  <div class="header-menu-item__inner">NEWS 
+                    <span>ニュース</span>
                   </div>
                 </li></a>
                 <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
-                    <div class="header-menu-item__inner">RECRUIT
-                      <span>リクルート</span>
+                    <div class="header-menu-item__inner">ABOUT
+                      <span>アバウト</span>
                     </div>
                   </li></a>
                   <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
-                      <div class="header-menu-item__inner">CONTACT
-                        <span>コンタクト</span>
+                      <div class="header-menu-item__inner">RECRUIT
+                        <span>リクルート</span>
                       </div>
                     </li></a>
-        </ul>
+                    <a href="" class="header-menu-item__wrap"><li class="header-menu-item">
+                        <div class="header-menu-item__inner">CONTACT
+                          <span>コンタクト</span>
+                        </div>
+                      </li></a>
+          </ul>
+        </div>
+        <!-- /.header-menu__inner -->
       </div>
-      <!-- /.header-menu__inner -->
-    </div>
+      <!-- header menu -->
 
-    <div class="MV">
-      <div class="MV__shadow"></div>
-      <h1 class="level1-heading">
-        <span class="level1-heading__inner">
-          未来に挑戦する<br class="sp-only">サンプルです。
-        </span>
-      </h1>
-      <div class="scroll-down">
-        <div class="scroll-down__text">SCROLL</div>
-        <div class="scroll-down__line"></div>
+      <!-- MV -->
+      <div class="MV container">
+        <div class="MV__shadow"></div>
+        <h1 class="level1-heading">
+          <span class="level1-heading__inner">
+            未来に挑戦する<br class="sp-only">サンプルです。
+          </span>
+        </h1>
+        <div class="scroll-down">
+          <div class="scroll-down__text">SCROLL</div>
+          <div class="scroll-down__line"></div>
+        </div>
       </div>
-    </div>
+      <!-- /MV -->
 
-    <!-- main content -->
-    <div class="main-content__wrap">
-      <div class="title__wrap">
-        <div class="title-triangle"></div>
-        <p class="title">SAMPLE <br class="pc-l-only">Inc.</p>
-      </div>
-      <div class="main-content">
-        <div class="main-content__inner">
-          <div class="cards cards_col3">
-            <div class="cards__item card">
-              <figure class="card__img-wrap">
-                <img class="card__img" src="./img/dev.jpg" alt="">
-              </figure>
-              <div class="card__body">
-                <h3 class="card__title">
-                  webアプリケーション開発
-                </h3>
-                <p class="card__text">
-                お客様のマーケティングやマネジメントに合わせたアプリケーションの開発を行います。<br>
-                日本でも多く使われているruby on railsを利用した開発を行なっております。
-                </p>
+
+      <!-- content wrap -->
+      <div class="content-wrap container">
+
+        <!-- content title -->
+        <div class="title__wrap">
+          <div class="title-triangle"></div>
+          <p class="title">SAMPLE <br class="pc-l-only">Inc.</p>
+        </div>
+        <!-- content title -->
+
+        <!-- contanet -->
+        <div class="content main-content">
+          <div class="content__inner">
+
+            <!-- card wrap -->
+            <div class="cards cards_col3">
+
+              <!-- card -->
+              <div class="cards__item card">
+                <figure class="card__img-wrap">
+                  <img class="card__img" src="./img/dev.jpg" alt="">
+                </figure>
+                <div class="card__body">
+                  <h3 class="card__title">
+                    webアプリケーション開発
+                  </h3>
+                  <p class="card__text">
+                  お客様のマーケティングやマネジメントに合わせたアプリケーションの開発を行います。<br>
+                  日本でも多く使われているruby on railsを利用した開発を行なっております。
+                  </p>
+                </div>
               </div>
+              <!-- /card -->
+              <!-- card -->
+              <div class="cards__item card">
+                <figure class="card__img-wrap">
+                  <img class="card__img" src="./img/consul.jpg" alt="">
+                </figure>
+                <div class="card__body">
+                  <h3 class="card__title">
+                    webコンサルティング
+                  </h3>
+                  <p class="card__text">
+                  お客様のサービスのweb展開をサポートいたします。webサイトの制作から、ブランディング、webを利用したカスタマーリレーションシップまで幅広くお手伝いさせていただきます。
+                  </p>
+                </div>
+              </div>
+              <!-- /card -->
+              <!-- card -->
+              <div class="cards__item card">
+                <figure class="card__img-wrap">
+                  <img class="card__img" src="./img/office.jpg" alt="">
+                </figure>
+                <div class="card__body">
+                  <h3 class="card__title">
+                    会社概要
+                  </h3>
+                  <p class="card__text">
+                  設立からまもない会社ですが、最先端の技術を取り入れ、常に新しい未来に挑戦しています。今後はスマホアプリの開発といった幅広いサンプルを展開していきます。
+                  </p>
+                </div>
+              </div>
+              <!-- /card -->
+
             </div>
-            <div class="cards__item card">
-              <figure class="card__img-wrap">
-                <img class="card__img" src="./img/consul.jpg" alt="">
-              </figure>
-              <div class="card__body">
-                <h3 class="card__title">
-                  webコンサルティング
-                </h3>
-                <p class="card__text">
-                お客様のサービスのweb展開をサポートいたします。webサイトの制作から、ブランディング、webを利用したカスタマーリレーションシップまで幅広くお手伝いさせていただきます。
-                </p>
-              </div>
-            </div>
-            <div class="cards__item card">
-              <figure class="card__img-wrap">
-                <img class="card__img" src="./img/office.jpg" alt="">
-              </figure>
-              <div class="card__body">
-                <h3 class="card__title">
-                  会社概要
-                </h3>
-                <p class="card__text">
-                設立からまもない会社ですが、最先端の技術を取り入れ、常に新しい未来に挑戦しています。今後はスマホアプリの開発といった幅広いサンプルを展開していきます。
-                </p>
-              </div>
+            <!-- /card wrap -->
+          </div>
+        </div>
+        <!-- /content -->
 
+      </div>
+      <!-- /content wrap -->
+
+      <!-- content wrap -->
+      <div class="content-wrap container">
+
+        <!-- content title -->
+        <div class="title__wrap">
+          <div class="title-triangle"></div>
+          <p class="title">CONTACT</p>
+        </div>
+        <!-- content title -->
+        
+        <!-- contact -->
+        <div class="content">
+          <div class="contact__wrap">
+            <div class="contact-btn__wrap">
+              <p class="contact-btn__caption">ご依頼・ご相談はこちらから</p>
+              <a class="btn" href="">
+                <span>CONTACT</span>
+              </a>
+            </div>
+            <div class="contact-btn__wrap contact-btn__wrap_bg-color">
+              <p class="contact-btn__caption">採用情報はこちらから</p>
+              <a class="btn" href="">
+                <span>RECRUIT</span>
+              </a>
             </div>
           </div>
         </div>
+        <!-- /contact -->
+
       </div>
+      <!-- /content wrap -->
+
     </div>
-    </div>
-    <!--/ main content -->
+    <!-- /#app vur用 -->
     <script>
       document.addEventListener('DOMContentLoaded',()=>{
               const MENU_BTN = document.getElementById("header-btn");
