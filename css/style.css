@@ -457,6 +457,14 @@ img {
     width: 50%;
   }
 }
+.contact-btn__caption {
+  padding-bottom: 12.5px;
+}
+@media (min-width: 768px) {
+  .contact-btn__caption {
+    padding-bottom: 25px;
+  }
+}
 
 /* topnews
 ------------------------------*/

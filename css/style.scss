@@ -407,6 +407,12 @@ img {
       width: 50%;
     }
   }
+  &__caption {
+    padding-bottom: 12.5px;
+    @media (min-width: 768px) {
+      padding-bottom: 25px;
+    }
+  }
 }
 /* topnews
 ------------------------------*/
