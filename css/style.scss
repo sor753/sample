@@ -482,6 +482,9 @@ img {
       width: 250px;
       padding: 0;
     }
+    @media (min-width: 1024px) {
+      width: 300px;
+    }
   }
 }
 .footer-contents {
@@ -498,6 +501,9 @@ img {
   margin-bottom: 25px;
   @media (min-width: 768px) {
     width: 200px;
+  }
+  @media (min-width: 1024px) {
+    width: 350px;
   }
 }
 .footer-info {
