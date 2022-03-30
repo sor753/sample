@@ -7,7 +7,7 @@ $text: #0c141e;
 $border: #c6c6c6;
 
 /* base
-------------------------------*/
+------------------------------------------------------------*/
 body {
   font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
   color : $text;
@@ -36,7 +36,7 @@ img {
     display: inline-block;
   }
 }/* common
-------------------------------*/
+------------------------------------------------------------*/
 .container {
   width: 100%;
   max-width: 1200px;
@@ -45,23 +45,33 @@ img {
 }
 .content-wrap {
     @media (min-width: 768px) {
-      margin-bottom: 25px;
+      margin-top: 25px;
     }
-    @media (min-width: 1200px) {
-      display: flex;
-      align-items: stretch;
+    &_top {
+      margin-top: 59px;
+      @media (min-width: 768px) {
+        margin-top: 90px;
+      }
+    }
+    &_bottom {
+      @media (min-width: 768px) {
+        margin-bottom: 25px;
+      }
     }
 }
 .btn {
   display: inline-block;
   width: 250px;
   max-width: 100%;
-  padding: 7.5px 25px;
+  padding: 10px 0;
   border: 1px solid $text;
   color: $text;
   font-weight: bold;
   text-align: center;
   transition: .25s;
+  @media (min-width: 768px) {
+    padding: 15px 0;
+  }
   &::after{
     content: '';
     display: inline-block;
@@ -233,12 +243,12 @@ img {
   }
   &__inner {
     position: relative;
-    width: 55%;
+    width: 100%;
     height: 100%;
     font-size: 20px;
     font-weight: bold;
     color: $text;
-    text-align: right;
+    text-align: center;
     padding-top: 15px;
     @media (min-width: 768px) {
       width: 100%;
@@ -252,21 +262,99 @@ img {
         font-weight: normal;
       }
     }
-    &::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: calc(100% + 25px);
-      width: 41px;
-      height: 61px;
-      background: url(../img/allow.svg) left center/auto no-repeat;
-      @media (min-width: 768px) {
-        display: none;
-      }
+  }
+}
+/* footer
+------------------------------*/
+.footer {
+  width: 100%;
+  background-color: $main;
+  padding: 50px 0 25px;
+  &__inner {
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    padding-left: 15px;
+    @media (min-width: 768px) {
+      width: 250px;
+      padding: 0;
+    }
+    @media (min-width: 1024px) {
+      width: 300px;
     }
   }
 }
+.footer-contents {
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+.footer-content {
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+  @media (min-width: 1024px) {
+    width: 350px;
+  }
+}
+.footer-info {
+  font-size: 12px;
+  color: #ffffff;
+  padding: 0 15px;
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+.footer-menu {
+  width: 100%;
+  height: auto;
+  background-color: $second;
+  @media (min-width: 768px) {
+    background-color: rgba(0,0,0,0);
+  }
+}
+.footer-menu-item {
+  width: 100%;
+  height: 61px;
+  border-bottom: 1px solid $text;
+  @media (min-width: 768px) {
+    height: auto;
+    border: none;
+  }
+  &__inner {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: $text;
+    text-align: center;
+    padding-top: 15px;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      font-weight: normal;
+      color: #ffffff;
+      text-align: left;
+      padding-top: 0;
+    }
+  }
+}
+.copy-right {
+  color: #ffffff;
+  text-align: center;
+}
+/* index
+------------------------------------------------------------*/
 /* MV
 ------------------------------*/
 .MV {
@@ -346,14 +434,6 @@ img {
     background: $main;
     text-align: center;
     padding: 32px 0;
-    @media (min-width: 1200px) {
-      display: flex;
-      align-items: center;
-      width: 200px;
-      height: auto;
-      text-align: left;
-      padding: 0 0 0 25px;
-    }
   }
 }
 .title-triangle {
@@ -415,7 +495,7 @@ img {
   }
 }
 /* topnews
-------------------------------*/
+-----------------------------*/
 .topnews {
   padding: 25px 15px 50px;
   color: #ffffff;
@@ -462,106 +542,33 @@ img {
     }
   }
 }
-/* footer
+/* news
+------------------------------------------------------------*/
+/* news
 ------------------------------*/
-.footer {
-  width: 100%;
-  background-color: $main;
-  padding: 50px 0 25px;
-  &__inner {
+.news {
+  padding: 50px 15px 25px;
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+  &__item {
+    padding: 15px;
+    border-bottom: 1px solid $border;
     @media (min-width: 768px) {
-      padding: 0 50px;
+      padding: 25px;
     }
   }
-  &__logo {
-    display: inline-block;
-    width: 200px;
-    height: auto;
-    padding-left: 15px;
+  &__date {
     @media (min-width: 768px) {
-      width: 250px;
-      padding: 0;
-    }
-    @media (min-width: 1024px) {
-      width: 300px;
-    }
-  }
-}
-.footer-contents {
-  margin-bottom: 25px;
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-}
-.footer-content {
-  margin-bottom: 25px;
-  @media (min-width: 768px) {
-    width: 200px;
-  }
-  @media (min-width: 1024px) {
-    width: 350px;
-  }
-}
-.footer-info {
-  font-size: 12px;
-  color: #ffffff;
-  padding: 0 15px;
-  @media (min-width: 768px) {
-    padding: 0;
-  }
-}
-.footer-menu {
-  width: 100%;
-  height: auto;
-  background-color: $second;
-  @media (min-width: 768px) {
-    background-color: rgba(0,0,0,0);
-  }
-}
-.footer-menu-item {
-  width: 100%;
-  height: 61px;
-  border-bottom: 1px solid $text;
-  @media (min-width: 768px) {
-    height: auto;
-    border: none;
-  }
-  &__inner {
-    position: relative;
-    width: 55%;
-    font-size: 20px;
-    font-weight: bold;
-    color: $text;
-    text-align: right;
-    padding-top: 15px;
-    @media (min-width: 768px) {
-      width: 100%;
-      font-size: 16px;
-      font-weight: normal;
-      color: #ffffff;
-      text-align: left;
-      padding-top: 0;
-    }
-    &::after {
-      content: '';
       display: inline-block;
-      position: absolute;
-      top: 0;
-      left: calc(100% + 25px);
-      width: 41px;
-      height: 61px;
-      background: url(../img/allow.svg) left center/auto no-repeat;
-      @media (min-width: 768px) {
-        content: none;
-      }
+      width: 20%;
+      vertical-align: top;
     }
   }
-}
-.copy-right {
-  color: #ffffff;
-  text-align: center;
+  &__text {
+    @media (min-width: 768px) {
+      display: inline-block;
+      width: 79%;
+    }
+  }
 }
