@@ -35,7 +35,9 @@ img {
   @media (min-width: 1200px) {
     display: inline-block;
   }
-}/* common
+}
+
+/* common
 ------------------------------------------------------------*/
 .container {
   width: 100%;
@@ -412,16 +414,11 @@ img {
 }
 /* content
 ------------------------------*/
-.content {
-  @media (min-width: 1200px) {
-    flex-grow: 1;
-  }
+.main-content {
+  background-color: $bg;
   &__inner {
     padding: 25px 15px;
   }
-}
-.main-content {
-  background-color: $bg;
 }
 .title {
   display: inline;
@@ -551,6 +548,8 @@ img {
   @media (min-width: 768px) {
     padding: 50px;
   }
+}
+.list {
   &__item {
     padding: 15px;
     border-bottom: 1px solid $border;
@@ -558,8 +557,11 @@ img {
       padding: 25px;
     }
   }
-  &__date {
+  &__date,
+  &__title {
+    padding-bottom: 7.5px;
     @media (min-width: 768px) {
+      padding-bottom: 0;
       display: inline-block;
       width: 20%;
       vertical-align: top;
@@ -571,4 +573,59 @@ img {
       width: 79%;
     }
   }
+}
+/* about
+------------------------------------------------------------*/
+/* flex-content
+------------------------------*/
+.flex-contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-content {
+  width: 100%;
+  padding: 25px 15px;
+  @media (min-width: 768px) {
+    width: 50%;
+    padding: 25px;
+  }
+  &__img {
+    height: 250px;
+    background: url(/img/consul.jpg) center center/cover no-repeat;
+    @media (min-width: 750px) {
+      height: auto;
+    }
+  }
+}
+.bg-second {
+  background-color: $second;
+}
+.bg-accent {
+  background-color: $accent;
+}
+.pc-bg-second {
+  @media (min-width: 768px) {
+    background-color: $second;
+  }
+}
+.pc-bg-accent {
+  @media (min-width: 768px) {
+    background-color: $accent;
+  }
+}
+.flex-content-title {
+  padding-bottom: 12.5px;
+  margin-bottom: 12.5px;
+  border-bottom: 1px solid #ffffff;
+  @media (min-width: 768px) {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  &__inner {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+.content {
+  padding: 50px 15px;
 }
