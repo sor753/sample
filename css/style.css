@@ -414,14 +414,30 @@ img {
 .MV {
   position: relative;
   height: 400px;
-  background: url(../img/MV.jpg) center center/cover no-repeat;
   margin-top: 59px;
 }
 @media (min-width: 768px) {
   .MV {
     height: 540px;
     margin-top: 90px;
+    margin-bottom: -25px;
   }
+}
+.MV__slide {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.MV__slide_1 {
+  background-image: url(../img/MV.jpg);
+}
+.MV__slide_2 {
+  background-image: url(../img/consul.jpg);
+}
+.MV__slide_3 {
+  background-image: url(../img/office.jpg);
 }
 .MV__shadow {
   position: absolute;
@@ -430,6 +446,10 @@ img {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hooper {
+  height: 100% !important;
 }
 
 .level1-heading {

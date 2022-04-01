@@ -46,20 +46,20 @@ img {
   margin-left: auto;
 }
 .content-wrap {
+  @media (min-width: 768px) {
+    margin-top: 25px;
+  }
+  &_top {
+    margin-top: 59px;
     @media (min-width: 768px) {
-      margin-top: 25px;
+      margin-top: 90px;
     }
-    &_top {
-      margin-top: 59px;
-      @media (min-width: 768px) {
-        margin-top: 90px;
-      }
+  }
+  &_bottom {
+    @media (min-width: 768px) {
+      margin-bottom: 25px;
     }
-    &_bottom {
-      @media (min-width: 768px) {
-        margin-bottom: 25px;
-      }
-    }
+  }
 }
 .btn {
   display: inline-block;
@@ -362,11 +362,27 @@ img {
 .MV {
   position: relative;
   height: 400px;
-  background: url(../img/MV.jpg) center center/cover no-repeat;
   margin-top: 59px;  
   @media (min-width: 768px) {
     height: 540px;
     margin-top: 90px;
+    margin-bottom: -25px;
+  }
+  &__slide {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &_1 {
+      background-image: url(../img/MV.jpg);
+    }
+    &_2 {
+      background-image: url(../img/consul.jpg);
+    }
+    &_3 {
+      background-image: url(../img/office.jpg);
+    }
   }
   &__shadow {
     position: absolute;
@@ -376,6 +392,9 @@ img {
     left: 0;
     background-color: rgba(0,0,0,0.4);
   }
+}
+.hooper {
+  height: 100% !important;
 }
 .level1-heading {
   position: absolute;

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0"></script>
+    <script src="https://unpkg.com/vue@2.6.10"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hooper@0.2.1/dist/hooper.css">
+    <script src="https://cdn.jsdelivr.net/npm/hooper@0.2.1/dist/hooper.min.js"></script>
   </head>
   <body>
 
@@ -80,6 +82,19 @@
 
       <!-- MV -->
       <div class="MV container">
+        <hooper
+          :auto-play="true"
+          :play-speed="3000">
+          <slide>
+            <div class="MV__slide MV__slide_1"></div>
+          </slide>
+          <slide>
+            <div class="MV__slide MV__slide_2"></div>
+          </slide>
+          <slide>
+            <div class="MV__slide MV__slide_3"></div>
+          </slide>
+        </hooper>
         <div class="MV__shadow"></div>
         <h1 class="level1-heading">
           <span class="level1-heading__inner">
@@ -333,6 +348,13 @@
                       MENU.classList.toggle("is_open");
                     });
             });
+      new Vue({
+              el: '#app',
+              components: {
+                      Hooper: window.Hooper.Hooper,
+                      Slide: window.Hooper.Slide
+                    }
+            })
     </script>
   </body>
 </html>
