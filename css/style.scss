@@ -366,6 +366,7 @@ img {
   @media (min-width: 768px) {
     height: 540px;
     margin-top: 90px;
+    margin-bottom: -25px;
   }
   &__slide {
     width: 100%;
@@ -390,17 +391,10 @@ img {
     bottom: 0;
     left: 0;
     background-color: rgba(0,0,0,0.4);
-    pointer-events: none;
   }
 }
 .hooper {
   height: 100% !important;
-}
-.hooper-track {
-  pointer-events: none;
-}
-.hooper-slide {
-  pointer-events: none;
 }
 .level1-heading {
   position: absolute;
