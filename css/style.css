@@ -554,6 +554,9 @@ img {
     width: 50%;
   }
 }
+.contact-btn__wrap_center {
+  width: 100% !important;
+}
 .contact-btn__caption {
   padding-bottom: 12.5px;
 }
@@ -635,12 +638,15 @@ img {
 
 .list__item {
   padding: 15px;
-  border-bottom: 1px solid #c6c6c6;
+  border-top: 1px solid #c6c6c6;
 }
 @media (min-width: 768px) {
   .list__item {
     padding: 25px;
   }
+}
+.list__inner > *:last-child {
+  border-bottom: 1px solid #c6c6c6;
 }
 .list__date, .list__title {
   padding-bottom: 7.5px;
@@ -727,4 +733,53 @@ img {
 
 .content {
   padding: 50px 15px;
+}
+
+/* rexruit
+------------------------------------------------------------*/
+/* recruit
+------------------------------*/
+.recruit {
+  padding: 50px 15px 25px;
+}
+@media (min-width: 768px) {
+  .recruit {
+    padding: 50px;
+  }
+}
+
+/* contact
+------------------------------------------------------------*/
+/* contact form
+------------------------------*/
+.contact-form {
+  padding: 50px 15px 25px;
+}
+@media (min-width: 768px) {
+  .contact-form {
+    padding: 50px;
+  }
+}
+
+.contact-form-item {
+  margin-bottom: 12.5px;
+}
+@media (min-width: 768px) {
+  .contact-form-item {
+    margin-bottom: 25px;
+  }
+}
+.contact-form-item__label {
+  display: block;
+  margin-bottom: 7.5px;
+}
+@media (min-width: 768px) {
+  .contact-form-item__label {
+    margin-bottom: 15px;
+  }
+}
+.contact-form-item__input {
+  width: 100%;
+  padding: 7.5px;
+  border: 1px solid #c6c6c6;
 }

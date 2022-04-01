@@ -483,6 +483,9 @@ img {
     @media (min-width: 768px) {
       width: 50%;
     }
+    &_center {
+      width: 100% !important;
+    }
   }
   &__caption {
     padding-bottom: 12.5px;
@@ -552,10 +555,13 @@ img {
 .list {
   &__item {
     padding: 15px;
-    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
     @media (min-width: 768px) {
       padding: 25px;
     }
+  }
+  &__inner > *:last-child {
+    border-bottom: 1px solid $border;
   }
   &__date,
   &__title {
@@ -628,4 +634,42 @@ img {
 }
 .content {
   padding: 50px 15px;
+}
+/* rexruit
+------------------------------------------------------------*/
+/* recruit
+------------------------------*/
+.recruit {
+  padding: 50px 15px 25px;
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+}
+/* contact
+------------------------------------------------------------*/
+/* contact form
+------------------------------*/
+.contact-form {
+  padding: 50px 15px 25px;
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+}
+.contact-form-item {
+  margin-bottom: 12.5px;
+  @media (min-width: 768px) {
+    margin-bottom: 25px;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 7.5px;
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 7.5px;
+    border: 1px solid $border; 
+  }
 }
